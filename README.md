@@ -10,7 +10,7 @@ Add the gem into your Gemfile
 
 Then, put this into your initializers:
 
-  Rails.configuration.middleware.use "CrawlableJS::Rack"
+    Rails.configuration.middleware.use "CrawlableJS::Rack"
 
 This gem also support following options:
 

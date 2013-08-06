@@ -1,17 +1,3 @@
-#
-# Actions to use this middleware:
-#   - add
-#       config.threadsafe!
-#     to config/application.rb
-#   - add
-#       require "#{Rails.root}/lib/google_indexable"
-#       Rails.configuration.middleware.use GoogleIndexable, timeout: 20, is_ready_test: "true"
-#     to initializers
-#   - Add
-#       <meta name="fragment" content="!">
-#     to your layout file
-#
-
 module CrawlableJS
   class Rack
     def initialize(app, options={})
@@ -22,8 +8,8 @@ module CrawlableJS
     def call(env)
       @status, @headers, @response = @app.call(env)
 
-      request = Rack::Request.new(env)
-      if se_request?
+      request = ::Rack::Request.new(env)
+      if se_request?(request)
         Rails.logger.info ">>> CrawlableJS"
 
         original_url = original_url(request)
