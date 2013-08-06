@@ -20,7 +20,7 @@ This gem also support following options:
       config.cache_expires_in = 10.hours
       config.is_ready_test    = "document.getElementById('loading') == null"
       config.http_auth_user   = 'user'
-      config.http_auth_path   = 'password'
+      config.http_auth_pass   = 'password'
     end
 
 Then, in your layout `application.html.erb` file, add directive which will inform google that all your pages are ajax-generated:
