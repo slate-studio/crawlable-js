@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Roman Lupiychuk"]
   s.email       = ["roman@slatestudio.com"]
   s.homepage    = "https://github.com/slate-studio/crawlable-js"
-  s.summary     = "Use your angular templates with rails' asset pipeline"
+  s.summary     = "Make your one page js app indexable"
 
   s.files = %w(README.md LICENSE) + Dir["lib/**/*", "app/**/*"]
   s.license = 'MIT'
